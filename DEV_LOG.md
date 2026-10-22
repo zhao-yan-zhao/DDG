@@ -3128,3 +3128,22 @@
 ### 3. 质量验证
 - **Vitest 单元测试**：`npm test` 保持 **79 个测试套件，1317 / 1317 项用例 100% 全部通过 (PASS)**。
 - **TypeScript 编译与打包**：`npm run build` 成功输出产物，0 报错。
+
+---
+
+## 会话变更日志：初始化 Git 仓库并同步推送至 GitHub 远程仓库
+
+### 1. 会话基本信息
+- **时间**：2026-10-22 21:14 ~ 21:17 (GMT+8)
+- **核心诉求**：将项目完整源码上传至 GitHub 仓库（`https://github.com/zhao-yan-zhao/DDG.git`）。
+- **执行过程**：
+  1. 检测本地未初始化 Git，创建规范的 `.gitignore` 规则（排除 `node_modules/`、`dist/`、`dist-*/`、临时截屏及工具缓存）。
+  2. 初始化本地 Git 仓库（主分支 `main`），关联远程源 `https://github.com/zhao-yan-zhao/DDG.git`。
+  3. 执行暂存与首个里程碑版本提交（`feat: initial commit for Lonely City Divine Engine Camp (孤城神机营)`）。
+  4. 针对大型资源传输优化配置 Git 传输参数（设置 `http.postBuffer=524288000` 与 `http.version=HTTP/1.1`），成功规避 HTTP/2 流中断问题。
+  5. 顺利完成全量推送，建立主分支追踪。
+
+### 2. 交付成果
+- 远程仓库：`https://github.com/zhao-yan-zhao/DDG.git`
+- 分支：`main`
+- 状态：工作区整洁，代码与美术核心资源已全部同步至远程。
