@@ -1,0 +1,26 @@
+{
+  "name": "gucheng-shenjiying",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:web": "tsc --noEmit && vite build",
+    "build:douyin": "tsc --noEmit && vite build && node scripts/build-douyin.js",
+    "build:wechat": "tsc --noEmit && vite build && node scripts/build-wechat.js",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@types/three": "^0.186.0",
+    "phaser": "^3.87.0",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^1.6.0"
+  }
+}

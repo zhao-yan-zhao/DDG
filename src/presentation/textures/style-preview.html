@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>《孤城神机营》16型军械美术风格方案选型对比</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #12100d;
+      color: #ede6d8;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      padding: 24px;
+      width: 1200px;
+    }
+    h1 {
+      font-size: 26px;
+      color: #ffd700;
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
+    p.subtitle {
+      text-align: center;
+      color: #b0bec5;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .card {
+      background: #1a1713;
+      border: 1.5px solid #5d4037;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+      display: flex;
+      flex-direction: column;
+    }
+    .card-header {
+      padding: 12px 14px;
+      background: #271f18;
+      border-bottom: 1px solid #4e342e;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffeb3b;
+      margin-bottom: 4px;
+    }
+    .card-tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #3e2723;
+      color: #ffca28;
+      margin-right: 4px;
+    }
+    .canvas-container {
+      background: #2a323d; /* 模拟城头青砖沙盘 */
+      background-image: 
+        linear-gradient(to right, rgba(0,0,0,0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.25) 1px, transparent 1px);
+      background-size: 40px 40px;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+    }
+    .weapon-label {
+      font-size: 12px;
+      color: #cfd8dc;
+      text-align: center;
+      margin-top: 4px;
+    }
+    .card-desc {
+      padding: 14px;
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: #d7ccc8;
+      background: #181512;
+      flex-grow: 1;
+    }
+    .card-desc strong {
+      color: #ffd54f;
+    }
+    .card-desc ul {
+      margin-left: 18px;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>《孤城神机营》16型军械画风选型 · 视觉实景对比</h1>
+  <p class="subtitle">背景严格取自游戏真实城头青砖沙盘（#2a323d 条石）· 纯实体融入 vs 无UI卡牌框</p>
+
+  <div class="grid">
+    <!-- 方案一 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">方案 A：2.5D 战地重工实物风</div>
+        <span class="card-tag">沉浸战地</span><span class="card-tag">硬核明代实物</span>
+      </div>
+      <div class="canvas-container">
+        <div>
+          <canvas id="cvA1" width="120" height="150"></canvas>
+          <div class="weapon-label">红衣大炮 (1x2 实物战车)</div>
+        </div>
+        <div>
+          <canvas id="cvA2" width="90" height="90"></canvas>
+          <div class="weapon-label">神机火铳 (1x1 三脚架实物)</div>
+        </div>
+      </div>
+      <div class="card-desc">
+        <strong>核心特征：</strong>
+        <ul>
+          <li><strong>彻底去除卡牌边框</strong>：器械直接安放在城砖上。</li>
+          <li><strong>2.5D 俯视微角度</strong>：炮口与铳管斜向下对准坡道。</li>
+          <li><strong>真实物理材质</strong>：老红木炮车轮轴、锻铁冷灰铸炮身、贴合地面的深色柔和接触阴影。</li>
+          <li><strong>代入感最强</strong>：完全融为防御城垣的一部分。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 方案二 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">方案 B：武备志古籍水墨风</div>
+        <span class="card-tag">古籍木刻</span><span class="card-tag">文人水墨朱砂</span>
+      </div>
+      <div class="canvas-container">
+        <div>
+          <canvas id="cvB1" width="120" height="150"></canvas>
+          <div class="weapon-label">红衣大炮 (古籍白描版画)</div>
+        </div>
+        <div>
+          <canvas id="cvB2" width="90" height="90"></canvas>
+          <div class="weapon-label">神机火铳 (水墨铁线描)</div>
+        </div>
+      </div>
+      <div class="card-desc">
+        <strong>核心特征：</strong>
+        <ul>
+          <li><strong>古法铁线双勾描</strong>：纯正明代《武备志》木刻线描质感。</li>
+          <li><strong>素雅水墨底蕴</strong>：古朴焦墨轮廓配合淡赭石、淡花青局部晕染。</li>
+          <li><strong>朱砂军器钤印</strong>：器械上带有“敕造”、“大吉”等朱砂方印批注。</li>
+          <li><strong>儒将兵法感极高</strong>：与王守仁印信及兵法折页完美呼应。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 方案三 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">方案 C：国潮工笔金碧重彩风</div>
+        <span class="card-tag">华贵金碧</span><span class="card-tag">泥金勾勒矿物色</span>
+      </div>
+      <div class="canvas-container">
+        <div>
+          <canvas id="cvC1" width="120" height="150"></canvas>
+          <div class="weapon-label">红衣大炮 (金碧重彩泥金)</div>
+        </div>
+        <div>
+          <canvas id="cvC2" width="90" height="90"></canvas>
+          <div class="weapon-label">神机火铳 (朱砂红缨青铜)</div>
+        </div>
+      </div>
+      <div class="card-desc">
+        <strong>核心特征：</strong>
+        <ul>
+          <li><strong>金碧矿物重彩</strong>：高纯度朱砂赤红、孔雀石绿与青金石深蓝。</li>
+          <li><strong>泥金沥粉勾勒</strong>：铜箍、铆钉与结构边缘带有一圈细致金丝高光。</li>
+          <li><strong>精致战地基台</strong>：器械下方带有极简的工笔青铜浮雕卡扣基座。</li>
+          <li><strong>商业吸睛度最高</strong>：画面色彩饱满，阵营区分一目了然。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 方案四 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">方案 D：宣德古铜机关雕塑风</div>
+        <span class="card-tag">宣德铜炉</span><span class="card-tag">青铜机关镇物</span>
+      </div>
+      <div class="canvas-container">
+        <div>
+          <canvas id="cvD1" width="120" height="150"></canvas>
+          <div class="weapon-label">红衣大炮 (宣德古铜重器)</div>
+        </div>
+        <div>
+          <canvas id="cvD2" width="90" height="90"></canvas>
+          <div class="weapon-label">神机火铳 (青铜齿轮机巧)</div>
+        </div>
+      </div>
+      <div class="card-desc">
+        <strong>核心特征：</strong>
+        <ul>
+          <li><strong>宣德铜炉重质感</strong>：暗金褐色古铜铸态，带有斑驳铜绿锈斑。</li>
+          <li><strong>机关雕塑形态</strong>：犹如城楼上的镇城机关神物，具有雕塑分量感。</li>
+          <li><strong>墨家机括外露</strong>：精密齿轮、连杆与榫卯青铜锁扣历历在目。</li>
+          <li><strong>古朴厚重统一</strong>：全军械色调高度和谐统一。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // 方案 A：2.5D 战地重工业实物风 (Battlefield Mechanical Realism)
+    // =========================================================================
+    function drawA1(canvas) {
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width, h = canvas.height;
+      const cx = w / 2, cy = h / 2 + 5;
+
+      // 1. 地面柔和漫反射接触阴影 (完全融于青砖)
+      ctx.fillStyle = 'rgba(10, 12, 16, 0.65)';
+      ctx.beginPath();
+      ctx.ellipse(cx, cy + 22, 44, 18, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // 2. 实木战车炮架 (沉香木梯形轮廓，左暗右明)
+      const cartGrad = ctx.createLinearGradient(cx - 30, 0, cx + 30, 0);
+      cartGrad.addColorStop(0, '#3e2723');
+      cartGrad.addColorStop(0.4, '#5d4037');
+      cartGrad.addColorStop(1, '#271c19');
+      ctx.fillStyle = cartGrad;
+      ctx.beginPath();
+      ctx.moveTo(cx - 24, cy - 20);
+      ctx.lineTo(cx + 24, cy - 20);
+      ctx.lineTo(cx + 28, cy + 38);
+      ctx.lineTo(cx - 28, cy + 38);
+      ctx.closePath();
+      ctx.fill();
+      ctx.strokeStyle = '#1b120c';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      // 双侧铁甲大木轮 (4辐条)
+      [-32, 32].forEach(wx => {
+        ctx.fillStyle = '#263238';
+        ctx.fillRect(cx + wx - 5, cy - 18, 10, 56);
+        ctx.fillStyle = '#4e342e';
+        ctx.fillRect(cx + wx - 3, cy - 16, 6, 52);
+        // 青铜轮毂
+        ctx.fillStyle = '#c5a059';
+        ctx.beginPath(); ctx.arc(cx + wx, cy + 10, 4, 0, Math.PI * 2); ctx.fill();
+      });
+
+      // 3. 2.5D 俯视万历重炮炮身 (微俯视朝向下方敌军坡道)
+      const barrelGrad = ctx.createLinearGradient(cx - 16, 0, cx + 16, 0);
+      barrelGrad.addColorStop(0, '#263238');
+      barrelGrad.addColorStop(0.2, '#546e7a');
+      barrelGrad.addColorStop(0.5, '#cfd8dc');
+      barrelGrad.addColorStop(0.8, '#455a64');
+      barrelGrad.addColorStop(1, '#1b2327');
+      ctx.fillStyle = barrelGrad;
+      ctx.beginPath();
+      ctx.moveTo(cx - 13, cy + 42); // 炮尾宽
+      ctx.lineTo(cx + 13, cy + 42);
+      ctx.lineTo(cx + 9, cy - 56);  // 炮口窄 (朝向下方/前向)
+      ctx.lineTo(cx - 9, cy - 56);
+      ctx.closePath();
+      ctx.fill();
+      ctx.strokeStyle = '#12191d';
+      ctx.lineWidth = 1.8;
+      ctx.stroke();
+
+      // 凸起黄铜加固箍带
+      [-40, -10, 20].forEach(by => {
+        ctx.fillStyle = '#c5a059';
+        ctx.fillRect(cx - 12, cy + by, 24, 5);
+        ctx.fillStyle = '#fff9c4';
+        ctx.fillRect(cx - 2, cy + by, 4, 5); // 镜面反光
+      });
+
+      // 俯视深邃炮口
+      ctx.fillStyle = '#c5a059';
+      ctx.beginPath(); ctx.ellipse(cx, cy - 56, 9, 4, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#0a0a0a';
+      ctx.beginPath(); ctx.ellipse(cx, cy - 56, 6, 2.5, 0, 0, Math.PI * 2); ctx.fill();
+
+      // 炮尾铸铁提钮
+      ctx.fillStyle = '#37474f';
+      ctx.beginPath(); ctx.arc(cx, cy + 46, 6, 0, Math.PI * 2); ctx.fill();
+    }
+
+    function drawA2(canvas) {
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width, h = canvas.height;
+      const cx = w / 2, cy = h / 2;
+
+      // 地面阴影
+      ctx.fillStyle = 'rgba(10, 12, 16, 0.55)';
+      ctx.beginPath();
+      ctx.ellipse(cx, cy + 22, 26, 8, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // 青铜支撑三叉架 (深深扎入城墙青砖)
+      ctx.strokeStyle = '#c5a059';
+      ctx.lineWidth = 3.5;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(cx - 18, cy + 24); ctx.lineTo(cx, cy + 6); ctx.lineTo(cx + 18, cy + 24);
+      ctx.moveTo(cx, cy + 6); ctx.lineTo(cx, cy + 24);
+      ctx.stroke();
+
+      // 八棱火铳身 (斜指下方)
+      const gunGrad = ctx.createLinearGradient(cx - 16, cy - 24, cx + 16, cy + 24);
+      gunGrad.addColorStop(0, '#37474f');
+      gunGrad.addColorStop(0.4, '#b0bec5');
+      gunGrad.addColorStop(1, '#1b2327');
+      ctx.strokeStyle = gunGrad;
+      ctx.lineWidth = 7;
+      ctx.beginPath();
+      ctx.moveTo(cx - 14, cy - 26); // 枪托
+      ctx.lineTo(cx + 16, cy + 20); // 枪口朝向右下坡道
+      ctx.stroke();
+
+      // 胡桃木枪托
+      ctx.strokeStyle = '#5d4037';
+      ctx.lineWidth = 6;
+      ctx.beginPath();
+      ctx.moveTo(cx - 20, cy - 32); ctx.lineTo(cx - 8, cy - 18);
+      ctx.stroke();
+
+      // 纯正朱砂红缨
+      ctx.fillStyle = '#d32f2f';
+      ctx.beginPath();
+      ctx.moveTo(cx + 6, cy + 10);
+      ctx.quadraticCurveTo(cx + 14, cy + 20, cx + 18, cy + 28);
+      ctx.quadraticCurveTo(cx + 8, cy + 24, cx + 4, cy + 12);
+      ctx.fill();
+    }
+
+    // =========================================================================
+    // 方案 B：大明武备志古籍水墨风 (Ancient Military Treatise Ink & Vermilion)
+    // =========================================================================
+    function drawB1(canvas) {
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width, h = canvas.height;
+      const cx = w / 2, cy = h / 2 + 5;
+
+      // 宣纸拓片淡色底
+      ctx.fillStyle = '#eedcba';
+      ctx.beginPath();
+      ctx.roundRect(cx - 48, cy - 65, 96, 130, 4);
+      ctx.fill();
+      ctx.strokeStyle = '#8d6e63';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // 武备志焦墨双勾木刻轮廓 (大炮)
+      ctx.strokeStyle = '#1b1b1b';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(cx - 26, cy - 20, 52, 60);
+
+      // 墨线炮管
+      ctx.fillStyle = '#fffdf7';
+      ctx.beginPath();
+      ctx.moveTo(cx - 12, cy + 42); ctx.lineTo(cx + 12, cy + 42);
+      ctx.lineTo(cx + 8, cy - 52);  ctx.lineTo(cx - 8, cy - 52);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // 古籍刻版排线阴影 (Hatching)
+      ctx.lineWidth = 1;
+      for (let y = cy - 40; y < cy + 35; y += 5) {
+        ctx.beginPath();
+        ctx.moveTo(cx + 2, y); ctx.lineTo(cx + 8, y);
+        ctx.stroke();
+      }
+
+      // 木车大轮 (焦墨同心圆)
+      [-30, 30].forEach(wx => {
+        ctx.beginPath(); ctx.arc(cx + wx, cy + 10, 18, 0, Math.PI * 2); ctx.stroke();
+        ctx.beginPath(); ctx.arc(cx + wx, cy + 10, 6, 0, Math.PI * 2); ctx.stroke();
+        ctx.moveTo(cx + wx - 18, cy + 10); ctx.lineTo(cx + wx + 18, cy + 10);
+        ctx.moveTo(cx + wx, cy - 8); ctx.lineTo(cx + wx, cy + 28);
+        ctx.stroke();
+      });
+
+      // 朱砂印章【神机】
+      ctx.fillStyle = '#c62828';
+      ctx.fillRect(cx + 18, cy - 55, 18, 18);
+      ctx.strokeStyle = '#ffd54f';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(cx + 18, cy - 55, 18, 18);
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 9px sans-serif';
+      ctx.fillText('神机', cx + 19, cy - 43);
+    }
+
+    function drawB2(canvas) {
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width, h = canvas.height;
+      const cx = w / 2, cy = h / 2;
+
+      // 宣纸底色
+      ctx.fillStyle = '#eedcba';
+      ctx.beginPath(); ctx.arc(cx, cy, 38, 0, Math.PI * 2); ctx.fill();
+      ctx.strokeStyle = '#8d6e63'; ctx.lineWidth = 1; ctx.stroke();
+
+      // 水墨线描三眼火铳
+      ctx.strokeStyle = '#1a1a1a';
+      ctx.lineWidth = 2.2;
+      ctx.beginPath();
+      ctx.moveTo(cx - 18, cy - 24); ctx.lineTo(cx + 18, cy + 20);
+      ctx.stroke();
+
+      // 双线勾勒枪托与木纹
+      ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      ctx.moveTo(cx - 24, cy - 28); ctx.lineTo(cx - 10, cy - 14);
+      ctx.stroke();
+
+      // 朱砂淡彩红缨
+      ctx.fillStyle = '#d32f2f';
+      ctx.beginPath();
+      ctx.moveTo(cx + 8, cy + 8); ctx.lineTo(cx + 20, cy + 26); ctx.lineTo(cx + 10, cy + 20); ctx.fill();
+
+      // 朱砂小印【火】
+      ctx.fillStyle = '#c62828';
+      ctx.fillRect(cx - 24, cy + 12, 12, 12);
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 9px sans-serif';
+      ctx.fillText('火', cx - 22, cy + 21);
+    }
+
+    // =========================================================================
+    // 方案 C：国潮工笔金碧重彩风 (Guochao Gongbi Jinbi Mineral & Gold)
+    // =========================================================================
+    function drawC1(canvas) {
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width, h = canvas.height;
+      const cx = w / 2, cy = h / 2 + 5;
+
+      // 工笔重彩青铜云纹小基座 (无多余大框，仅托底)
+      ctx.fillStyle = '#0f2b26';
+      ctx.fillRect(cx - 36, cy + 28, 72, 14);
+      ctx.strokeStyle = '#ffd700';
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(cx - 36, cy + 28, 72, 14);
+
+      // 孔雀石绿与朱砂火神纹重彩炮架
+      const standGrad = ctx.createLinearGradient(cx - 25, 0, cx + 25, 0);
+      standGrad.addColorStop(0, '#880e4f');
+      standGrad.addColorStop(0.5, '#b71c1c');
+      standGrad.addColorStop(1, '#4a148c');
+      ctx.fillStyle = standGrad;
+      ctx.fillRect(cx - 24, cy - 18, 48, 50);
+
+      // 泥金勾边沥粉 (Gold Filigree)
+      ctx.strokeStyle = '#ffd700';
+      ctx.lineWidth = 1.8;
+      ctx.strokeRect(cx - 24, cy - 18, 48, 50);
+
+      // 金碧青绿炮管 (石青 + 石绿 + 泥金)
+      const canonGrad = ctx.createLinearGradient(cx - 15, 0, cx + 15, 0);
+      canonGrad.addColorStop(0, '#004d40');
+      canonGrad.addColorStop(0.3, '#00796b');
+      canonGrad.addColorStop(0.7, '#26a69a');
+      canonGrad.addColorStop(1, '#004d40');
+      ctx.fillStyle = canonGrad;
+      ctx.beginPath();
+      ctx.moveTo(cx - 12, cy + 38); ctx.lineTo(cx + 12, cy + 38);
+      ctx.lineTo(cx + 8, cy - 54);  ctx.lineTo(cx - 8, cy - 54);
+      ctx.closePath();
+      ctx.fill();
+      ctx.strokeStyle = '#ffd700';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      // 鎏金饕餮纹箍带
+      [-36, -10, 16].forEach(gy => {
+        ctx.fillStyle = '#ffd700';
+        ctx.fillRect(cx - 11, cy + gy, 22, 6);
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(cx - 2, cy + gy, 4, 6);
+      });
+
+      // 炮口琉璃红光
+      ctx.fillStyle = '#ff1744';
+      ctx.beginPath(); ctx.ellipse(cx, cy - 54, 8, 3.5, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.strokeStyle = '#ffd700'; ctx.lineWidth = 1.5; ctx.stroke();
+    }
+
+    function drawC2(canvas) {
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width, h = canvas.height;
+      const cx = w / 2, cy = h / 2;
+
+      // 泥金回纹底托
+      ctx.strokeStyle = '#ffd700';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.arc(cx, cy, 32, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // 朱砂赤火枪托
+      ctx.strokeStyle = '#c62828';
+      ctx.lineWidth = 7;
+      ctx.beginPath();
+      ctx.moveTo(cx - 16, cy - 24); ctx.lineTo(cx + 16, cy + 18);
+      ctx.stroke();
+
+      // 孔雀石绿八棱冷铁枪管
+      ctx.strokeStyle = '#00695c';
+      ctx.lineWidth = 8;
+      ctx.beginPath();
+      ctx.moveTo(cx - 6, cy - 10); ctx.lineTo(cx + 18, cy + 20);
+      ctx.stroke();
+
+      // 泥金描线
+      ctx.strokeStyle = '#ffd700';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(cx - 6, cy - 10); ctx.lineTo(cx + 18, cy + 20);
+      ctx.stroke();
+
+      // 华美金丝编结红缨
+      ctx.fillStyle = '#ff1744';
+      ctx.beginPath();
+      ctx.moveTo(cx + 10, cy + 10); ctx.lineTo(cx + 24, cy + 26); ctx.lineTo(cx + 12, cy + 22);
+      ctx.fill();
+    }
+
+    // =========================================================================
+    // 方案 D：宣德古铜机关雕塑风 (Xuan De Bronze Figurine & Totem)
+    // =========================================================================
+    function drawD1(canvas) {
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width, h = canvas.height;
+      const cx = w / 2, cy = h / 2 + 5;
+
+      // 宣德铜器深褐与绿斑渐变 (浑然一体失蜡铸造)
+      const bronzeGrad = ctx.createLinearGradient(cx - 30, 0, cx + 30, 0);
+      bronzeGrad.addColorStop(0, '#2d1f14');
+      bronzeGrad.addColorStop(0.3, '#5c4028');
+      bronzeGrad.addColorStop(0.7, '#8c6239');
+      bronzeGrad.addColorStop(1, '#2d1f14');
+
+      // 实体铜底台
+      ctx.fillStyle = bronzeGrad;
+      ctx.fillRect(cx - 32, cy + 18, 64, 24);
+      ctx.strokeStyle = '#1b120c';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(cx - 32, cy + 18, 64, 24);
+
+      // 青铜绿锈点缀
+      ctx.fillStyle = '#4db6ac';
+      ctx.fillRect(cx - 26, cy + 22, 6, 4);
+      ctx.fillRect(cx + 16, cy + 28, 8, 3);
+
+      // 宣德暗铜重炮
+      ctx.fillStyle = bronzeGrad;
+      ctx.beginPath();
+      ctx.moveTo(cx - 13, cy + 34); ctx.lineTo(cx + 13, cy + 34);
+      ctx.lineTo(cx + 9, cy - 54);  ctx.lineTo(cx - 9, cy - 54);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // 铜铸凸棱
+      [-36, -8, 16].forEach(by => {
+        ctx.fillStyle = '#c5a059';
+        ctx.fillRect(cx - 11, cy + by, 22, 4);
+      });
+
+      // 炮口内膛
+      ctx.fillStyle = '#100c08';
+      ctx.beginPath(); ctx.ellipse(cx, cy - 54, 7, 3, 0, 0, Math.PI * 2); ctx.fill();
+    }
+
+    function drawD2(canvas) {
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width, h = canvas.height;
+      const cx = w / 2, cy = h / 2;
+
+      // 宣德青铜底座
+      ctx.fillStyle = '#3e2718';
+      ctx.fillRect(cx - 24, cy + 14, 48, 10);
+      ctx.strokeStyle = '#1b1008';
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(cx - 24, cy + 14, 48, 10);
+
+      // 铜构支架
+      ctx.strokeStyle = '#8c6239';
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(cx - 14, cy + 14); ctx.lineTo(cx, cy + 2); ctx.lineTo(cx + 14, cy + 14);
+      ctx.stroke();
+
+      // 浑厚铜火铳
+      ctx.strokeStyle = '#5c4028';
+      ctx.lineWidth = 8;
+      ctx.beginPath();
+      ctx.moveTo(cx - 14, cy - 22); ctx.lineTo(cx + 14, cy + 16);
+      ctx.stroke();
+
+      // 铜绿斑点
+      ctx.fillStyle = '#4db6ac';
+      ctx.fillRect(cx + 2, cy - 2, 4, 3);
+      ctx.fillRect(cx - 8, cy - 14, 3, 3);
+    }
+
+    // 运行渲染
+    drawA1(document.getElementById('cvA1'));
+    drawA2(document.getElementById('cvA2'));
+    drawB1(document.getElementById('cvB1'));
+    drawB2(document.getElementById('cvB2'));
+    drawC1(document.getElementById('cvC1'));
+    drawC2(document.getElementById('cvC2'));
+    drawD1(document.getElementById('cvD1'));
+    drawD2(document.getElementById('cvD2'));
+  </script>
+</body>
+</html>
